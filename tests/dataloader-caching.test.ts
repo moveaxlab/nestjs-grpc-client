@@ -23,8 +23,7 @@ import { Observable, of } from 'rxjs';
 import { ManyRequest } from './__generated__/tests/ManyRequest';
 import { TestServiceDefinition } from './__generated__/tests/TestService';
 import { ManyResponse__Output } from './__generated__/tests/ManyResponse';
-import { MergeConfig } from '../types/dataloaders/grpc-dataloader.provider';
-import { Logger as MoveaxLogger } from '@moveax/nestjs-commons';
+import { MergeConfig } from '../src/dataloaders/grpc-dataloader.provider';
 
 type ServiceClient = GrpcClientForService<TestServiceDefinition>;
 
@@ -137,9 +136,8 @@ describe('Test dataloader caching', () => {
       ],
     }).compile();
 
-    MoveaxLogger.setLevel('debug');
     app = moduleRef.createNestApplication({
-      logger: new MoveaxLogger(),
+      logger: new Logger(),
     });
     await app.init();
 

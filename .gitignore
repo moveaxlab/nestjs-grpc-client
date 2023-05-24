@@ -4,3 +4,6 @@
 /types/
 .idea/
 *.tgz
+
+yarn-error.log
+node_modules/

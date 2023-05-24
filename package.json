@@ -11,6 +11,11 @@
   "license": "MIT",
   "private": false,
   "sideEffects": false,
+  "files": [
+    "lib",
+    "esm",
+    "types"
+  ],
   "scripts": {
     "build": "npm-run-all build:*",
     "build:cjs": "npm-run-all build:cjs:*",
@@ -26,7 +31,6 @@
     "test:unit": "jest --pass-with-no-tests --run-in-band ./tests/"
   },
   "dependencies": {
-    "@moveax/nestjs-commons": "^2.1.0",
     "dataloader": "^2.1.0"
   },
   "peerDependencies": {
