@@ -1,4 +1,4 @@
-# @moveax/nestjs-grpc-client
+# NestJS gRPC Client
 
 Create gRPC dataloaders for GraphQL and inject them dynamically in your resolvers.
 
