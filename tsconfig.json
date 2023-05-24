@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": false,
+    "module": "CommonJS",
+    "removeComments": true,
+    "sourceMap": false,
+    "declarationMap": false,
+    "lib": ["ES2021"],
+    "target": "ES2021",
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node16",
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "noEmit": true,
+    "rootDirs": ["./tests", "./src"]
+  },
+  "include": [
+    "./tests",
+    "./src",
+  ]
+}

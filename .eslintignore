@@ -1,0 +1,9 @@
+# Generated files
+/tests/__generated__/
+/app/
+/lib/
+/esm/
+/types/
+
+# Jest config file
+jest.config.js

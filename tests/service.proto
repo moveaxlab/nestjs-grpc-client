@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package tests;
+
+message SingleRequest {
+  string id = 1;
+}
+
+message SingleResponse {
+  string name = 1;
+}
+
+message ManyRequest {
+  repeated string ids = 1;
+}
+
+message ManyResponse {
+  map<string, string> names = 1;
+}
+
+service TestService {
+  rpc getSingle(SingleRequest) returns (SingleResponse);
+
+  rpc getMany(ManyRequest) returns (ManyResponse);
+}

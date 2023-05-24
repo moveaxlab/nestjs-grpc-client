@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "declarationDir": "./types"
+  },
+  "exclude": [
+    "./tests",
+    "./types"
+  ]
+}
