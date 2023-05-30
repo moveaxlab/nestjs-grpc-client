@@ -8,6 +8,11 @@
     "Michelle Laurenti <michelle.laurenti@moveax.it>",
     "Mattias Ezequiel Mignone <mattias.mignone@moveax.it>"
   ],
+  "homepage": "https://github.com/moveaxlab/nestjs-grpc-client",
+  "repository": {
+    "type": "git",
+    "directory": "https://github.com/moveaxlab/nestjs-grpc-client"
+  },
   "license": "MIT",
   "private": false,
   "sideEffects": false,
