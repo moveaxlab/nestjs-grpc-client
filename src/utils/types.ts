@@ -1,8 +1,11 @@
 import { Request as ExpressRequest } from 'express';
 import DataLoader from 'dataloader';
 import { GrpcDataLoaderProvider } from '../dataloaders';
+import { FastifyRequest } from 'fastify';
 
-export interface Request extends ExpressRequest {
+type FastifyOrExpressRequest = ExpressRequest | FastifyRequest;
+
+export type Request = FastifyOrExpressRequest & {
   getDataLoader?: (
     service: new (...args: unknown[]) => GrpcDataLoaderProvider<object>,
     method: string,
@@ -13,7 +16,7 @@ export interface Request extends ExpressRequest {
       [method: string]: DataLoader<unknown, unknown>;
     };
   };
-}
+};
 
 export interface ContextType {
   req: Request;
