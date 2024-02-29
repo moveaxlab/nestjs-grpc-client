@@ -84,7 +84,7 @@
     "renamer": "^4.0.0",
     "rxjs": "^7.8.0",
     "supertest": "^6.3.3",
-    "ts-jest": "^29.0.3",
+    "ts-jest": "^29.1.2",
     "typescript": "^5.3.3",
     "typescript-eslint-language-service": "^5.0.0"
   },
