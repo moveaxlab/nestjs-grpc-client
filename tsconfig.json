@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "allowJs": false,
-    "module": "CommonJS",
+    "module": "NodeNext",
     "removeComments": true,
     "sourceMap": false,
     "declarationMap": false,
     "lib": ["ES2021"],
-    "target": "ES2021",
+    "target": "ESNext",
     "alwaysStrict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -16,16 +16,16 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "NodeNext",
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
     "noEmit": true,
-    "rootDirs": ["./tests", "./src"]
+    "rootDirs": ["./tests", "./src"],
   },
   "include": [
     "./tests",
-    "./src",
+    "./src"
   ]
 }

@@ -1,8 +1,7 @@
-import { Request as ExpressRequest } from 'express';
 import DataLoader from 'dataloader';
 import { GrpcDataLoaderProvider } from '../dataloaders';
 
-export interface Request extends ExpressRequest {
+export interface Request {
   getDataLoader?: (
     service: new (...args: unknown[]) => GrpcDataLoaderProvider<object>,
     method: string,

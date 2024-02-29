@@ -1,4 +1,7 @@
 # NestJS gRPC Client
+![NPM](https://img.shields.io/npm/l/%40moveaxlab%2Fgraphql-client)
+[![npm](https://img.shields.io/npm/v/@moveaxlab/nestjs-grpc-client)](https://www.npmjs.com/package/@moveaxlab/nestjs-grpc-client)
+![Static Badge](https://img.shields.io/badge/node_version-_%3E%3D20-green)
 
 This library defines gRPC dataloaders you can inject dynamically in GraphQL resolvers in order to optimize calls via batching and caching.
 

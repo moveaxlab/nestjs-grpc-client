@@ -15,7 +15,7 @@ const Rpc = createParamDecorator<
   [
     new (...args: any[]) => GrpcDataLoaderProvider<object>,
     string,
-    boolean | undefined
+    boolean | undefined,
   ]
 >(([service, method, useCache], context: ExecutionContext) => {
   const request = getRequest(context);
@@ -31,7 +31,7 @@ const Rpc = createParamDecorator<
 
 export function createDataLoaderDecorator<
   C extends object,
-  T extends GrpcDataLoaderProvider<C>
+  T extends GrpcDataLoaderProvider<C>,
 >(
   loaderClass: new (...args: any[]) => T
 ): T extends GrpcDataLoaderProvider<infer C>

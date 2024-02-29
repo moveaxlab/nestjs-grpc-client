@@ -1,13 +1,9 @@
 /* eslint-disable max-classes-per-file */
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import {
-  Body,
-  CacheModule,
-  HttpCode,
-  INestApplication,
-  Post,
-} from '@nestjs/common';
+import { Body, HttpCode, INestApplication, Post } from '@nestjs/common';
+import { CacheModule } from '@nestjs/cache-manager';
+
 import {
   createDataLoaderDecorator,
   DataLoaderForClient,

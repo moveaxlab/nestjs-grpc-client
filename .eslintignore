@@ -4,6 +4,7 @@
 /lib/
 /esm/
 /types/
+/node_modules/
 
 # Jest config file
 jest.config.js

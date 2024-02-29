@@ -5,17 +5,15 @@ import { Observable } from 'rxjs';
 import { Metadata } from '@grpc/grpc-js';
 import { MethodDefinition } from '@grpc/proto-loader';
 
-type Input<Fn> = Fn extends MethodDefinition<infer R, any, any, any>
-  ? R
-  : never;
+type Input<Fn> =
+  Fn extends MethodDefinition<infer R, any, any, any> ? R : never;
 
-type Output<Fn> = Fn extends MethodDefinition<any, any, any, infer R>
-  ? Observable<R>
-  : never;
+type Output<Fn> =
+  Fn extends MethodDefinition<any, any, any, infer R> ? Observable<R> : never;
 
 export type GrpcClientForService<
   Service,
-  StreamMethods extends keyof Service = never
+  StreamMethods extends keyof Service = never,
 > = Omit<
   {
     [method in keyof Service as string extends method ? never : method]: (
