@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "allowJs": false,
-    "module": "Node16",
+    "module": "NodeNext",
     "removeComments": true,
     "sourceMap": false,
     "declarationMap": false,
@@ -16,7 +16,7 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,
-    "moduleResolution": "Node16",
+    "moduleResolution": "NodeNext",
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
