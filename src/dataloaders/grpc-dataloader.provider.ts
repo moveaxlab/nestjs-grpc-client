@@ -7,7 +7,7 @@ import { UncachedDataloader } from './uncached.dataloader';
 import { FirstArgumentType, ReturnType } from '../types/util.types';
 import { Request } from '../utils';
 import { catchError } from 'rxjs/operators';
-import LRU from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 
 interface CacheSingleConfig<M> {
   cacheKeyFn: (request: FirstArgumentType<M>) => string;
@@ -33,7 +33,7 @@ export type MergeConfig<Client> = Partial<{
 }>;
 
 function wrapCache<K, V>(
-  cache: LRU<string, Promise<V>>,
+  cache: LRUCache<string, Promise<V>>,
   config: CacheSingleConfig<(req: K) => Observable<V>>
 ): CacheMap<string, Promise<V>> {
   return {
@@ -60,7 +60,7 @@ export abstract class GrpcDataLoaderProvider<Client extends object> {
   generateDataLoader<ID, Type>(
     methodName: string,
     request: Request,
-    cache?: LRU<string, Promise<Type>>
+    cache?: LRUCache<string, Promise<Type>>
   ): DataLoader<ID, Type> {
     this.logger.debug(
       `Creating dataloader ${methodName} in ${this.constructor.name}`

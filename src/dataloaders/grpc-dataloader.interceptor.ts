@@ -11,17 +11,17 @@ import DataLoader from 'dataloader';
 import { Observable } from 'rxjs';
 import { GrpcDataLoaderProvider } from './grpc-dataloader.provider';
 import { getRequest, Request } from '../utils';
-import LRU from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 
 @Injectable()
 export class GrpcDataLoaderInterceptor implements NestInterceptor {
   private readonly logger = new Logger(GrpcDataLoaderInterceptor.name);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private lru: LRU<string, any>;
+  private lru: LRUCache<string, any>;
 
   constructor(private moduleRef: ModuleRef) {
-    this.lru = new LRU({
+    this.lru = new LRUCache({
       max: 500,
       ttl: 1000,
     });
