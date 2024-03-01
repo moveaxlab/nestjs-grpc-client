@@ -1,6 +1,6 @@
 {
   "name": "@moveaxlab/nestjs-grpc-client",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "main": "./lib/index.js",
   "module": "./esm/index.mjs",
   "types": "./types/index.d.ts",
